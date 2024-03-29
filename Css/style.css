@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+                        /* scrollbar  start*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+  }
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey; 
+  }
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }  
+
+                        /* scrollbar  start*/  
+
+body{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    background-color: black;
+    color: white;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+                     /* contenare  start*/
+.contenare{
+    padding: 15px 25px 25px;
+    display: flex;
+}
+
+                     /* contenare end*/
+
+                     /* section_menu start*/
+.section_menu{
+    cursor: pointer;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 245px;
+    height: 100vh;
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom:25px ;
+    border-right:1px solid #141414;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.section_menu #m1 a{  /* logo*/
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+.section_menu #m1{   /* scrollbar in navbar top*/
+    overflow: auto;
+}
+.section_menu #m1 #d{   
+    margin-top: 20px; 
+}
+.section_menu #m1 #d div  
+,.section_menu #d2 div{       /* nav bar top et  nav bar bottom*/
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+}
+.section_menu #m1 #d div span{
+    font-size: 16px;
+    font-weight: 400;
+}
+.section_menu #m1 #d div img{  /* image de profile navbar top*/
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    padding: 2px;
+    margin-left: -6px;
+    border: 1px solid white;
+}
+.icone_navbar_i{     /* i icone de side bar*/
+    font-size: 18px;
+}
+
+
+.section_menu #m1 #d div:hover ,
+.section_menu #d2 div:hover{
+    background-color: #1A1A1A;
+}
+
+
+
+/* main */
+.section_main{
+    padding-top: 30px;
+    height: 100%;
+    width: 100%;
+    margin-left: 245px;
+}
+.content_main{           /* main section_main         //  body de main*/
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#header{
+    display: flex;
+}
+#header img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    margin-left: 80px;
+    margin-right: 50px;
+    margin-top: -15px;
+}
+#d1{     /*contener de colon don le header*/
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+           /*colon 1 don le header  start*/
+#s1{     
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+#s1 span{
+    margin-right: 20px;
+    cursor: pointer;
+}
+#s1 a{
+    margin-right:12px;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #545454;
+    border-radius: 9px;
+    cursor: pointer;
+}
+#s1 a:hover{
+    background-color: #3a3a3a;
+    cursor: pointer;
+}
+             /*colon 1 don le header  end*/
+
+              /*colon 2 don le header  start*/
+#s2{
+    display: flex;
+    gap: 25px;
+}
+#s2 span{
+    font-size: 14px;
+    cursor: pointer;
+
+}
+             /*colon 2 don le header  end*/
+            /*section de nwe  start*/
+#section_nwe{
+    display: flex; 
+    flex-direction: column;
+     align-items: center; 
+     width: fit-content; 
+     margin: 50px;
+}
+#section_nwe span{
+    font-size: 15px;
+    cursor: pointer;
+}
+#continer_icone_plus{
+   width: fit-content;
+   padding: 3px;
+   border: 3px solid #121212;
+   background-color: black;
+   border-radius: 50px;
+   margin-bottom: 8px;
+}
+#continer_icone_plus div{
+   width: 75px;
+   height: 75px;
+   background-color: #121212;
+   border-radius: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#continer_icone_plus div span{
+    font-size: 80px;
+    font-weight: 200;
+    color: #707070;
+    cursor: pointer;
+}
+             /*section de nwe  start*/
+             /*section de button de controle  start*/
+#section_button_de_controle{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: 1px solid #141414;
+}
+
+#section_button_de_controle div{
+    width: fit-content;
+    margin-left: 60px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    
+}
+#section_button_de_controle div span{
+    font-size: 14px;
+}
+.actev::after{
+    content:"";
+    background-color: white;
+    width: 80px;
+    height: 2px;
+    position: absolute;
+    top: -16px;
+}
+#section_button_de_controle div span{
+    margin-left: 8px;
+    color: #A8A8A8;
+    font-weight: 600;
+    cursor: pointer;
+}
+                  /*section de button de controle  end*/
+                    /*section_main gallery start*/
+.colon4{  /*section de posts*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+.colon5{  /*section de saved*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+.colon6{  /*section de tagged*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+   
+}
+
+.continer_image{
+    width: 32%;
+    height: 250px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.continer_image img{
+    width:100%;
+    height:100%;
+    object-position: center;
+}
+.continer_image img:hover{
+    filter: brightness(50%);
+}
+.continer_image img:hover + .hov {
+    display: block; 
+}
+      /* div de like et comment start*/
+.hov span{
+    margin-right: 20px;
+    margin-left: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.hov i{
+    font-size: 20px;
+}
+.hov{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    display: none;
+}
+          /* div de like et comment end*/
+          /* icne de play start*/
+.e2{
+    position: absolute;
+    bottom: 4px;
+    left: 8px;  
+}
+.e2 i{
+    margin-right: 8px; 
+}
+         /* icne de play end*/
+.t2{  /* icne de reels*/
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    
+}
+                                           /*section_main gallery end*/
+.section_footer{
+    margin-top:50px
+}
+#f1{   /* colon 1*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+#f2{   /* colon 2*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+#f1 a,
+#f2 a{
+    font-size: 12px;
+    color: #A8A8A8;
+    cursor: pointer;
+}
+#select_langues{
+    background-color: black;
+    border: none;
+    outline: none;
+    width: 65px;
+    font-family:"Open Sans", sans-serif ;
+    font-size: 12px;
+    color: #A8A8A8;
+    cursor: pointer;
+}
+#select_langues option{
+    background-color: white;
+    color: black;
+}
