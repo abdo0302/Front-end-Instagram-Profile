@@ -90,11 +90,10 @@ a{
     font-weight: 400;
 }
 .section_menu #m1 #d div img{  /* image de profile navbar top*/
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     border-radius: 20px;
     padding: 2px;
-    margin-left: -6px;
     border: 1px solid white;
 }
 .icone_navbar_i{     /* i icone de side bar*/
@@ -111,7 +110,6 @@ a{
 
 /* main */
 .section_main{
-    padding-top: 30px;
     height: 100%;
     width: 100%;
     margin-left: 245px;
@@ -133,12 +131,12 @@ a{
     border-radius: 100px;
     margin-left: 80px;
     margin-right: 50px;
-    margin-top: -15px;
 }
 #d1{     /*contener de colon don le header*/
     display: flex;
     flex-direction: column;
     gap: 25px;
+    padding-top: 25px;
 }
            /*colon 1 don le header  start*/
 #s1{     
