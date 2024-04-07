@@ -44,7 +44,8 @@ a{
 
                      /* contenare  start*/
 .contenare{
-    padding: 15px 25px 25px;
+    padding-top: 15px ;
+    padding-bottom: 25px;
     display: flex;
 }
 
@@ -52,8 +53,8 @@ a{
 
                      /* section_menu start*/
 .section_menu{
+    background-color: black;
     cursor: pointer;
-    margin-left: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -61,18 +62,25 @@ a{
     height: 100vh;
     padding-top: 30px;
     padding-right: 20px;
+    padding-left: 20px;
     padding-bottom:25px ;
     border-right:1px solid #141414;
     position: fixed;
-    top: 0;
+
     left: 0;
+
 }
 
-.section_menu #m1 a{  /* logo*/
+.section_menu #m1 .logo1{  /* logo*/
     display: inline-block;
     font-size: 30px;
     font-weight: 600;
     margin-left: 15px;
+}
+.section_menu #m1 .logo2{
+    font-size: 23px;
+    margin-bottom: 15px;
+    display: none;
 }
 .section_menu #m1{   /* scrollbar in navbar top*/
     overflow: auto;
@@ -92,9 +100,13 @@ a{
     font-size: 16px;
     font-weight: 400;
 }
+.section_menu #d2 div span{
+    font-size: 16px;
+    font-weight: 400;
+}
 .section_menu #m1 #d div img{  /* image de profile navbar top*/
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     border-radius: 20px;
     padding: 2px;
     border: 1px solid white;
@@ -116,9 +128,13 @@ a{
     height: 100%;
     width: 100%;
     margin-left: 245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .content_main{           /* main section_main         //  body de main*/
-    width: 60%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -127,12 +143,13 @@ a{
 }
 #header{
     display: flex;
+    width: 80%;
+    justify-content: end
 }
 #header img{
     width: 150px;
     height: 150px;
     border-radius: 100px;
-    margin-left: 80px;
     margin-right: 50px;
 }
 #d1{     /*contener de colon don le header*/
@@ -218,16 +235,17 @@ a{
     width: 100%;
     display: flex;
     flex-direction: row;
+    gap: 40px;
     justify-content: center;
     border-top: 1px solid #141414;
 }
 
 #section_button_de_controle div{
     width: fit-content;
-    margin-left: 60px;
     margin-top: 15px;
     margin-bottom: 15px;
     display: flex;
+    justify-content: center;
     align-items: center;
     position: relative;
     cursor: pointer;
@@ -329,21 +347,22 @@ a{
 .section_footer{
     margin-top:50px
 }
-#f1{   /* colon 1*/
+#div1{   /* colon 1*/
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
     margin-bottom: 20px;
 }
-#f2{   /* colon 2*/
+#div2{   /* colon 2*/
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 15px;
 }
-#f1 a,
-#f2 a{
+#div1 a,
+#div2 a{
     font-size: 12px;
     color: #A8A8A8;
     cursor: pointer;
@@ -361,4 +380,135 @@ a{
 #select_langues option{
     background-color: white;
     color: black;
+}
+
+
+       /*media queries */
+@media (max-width:1264px) {
+    .section_menu #m1 #d div span ,
+    .section_menu #d2 div span{
+        display: none;
+    }
+    .section_menu #m1 #d div  
+    ,.section_menu #d2 div{
+        width: fit-content;
+    }
+    .section_menu{
+        width: fit-content;
+    }
+    .section_menu #m1 .logo1{
+        display: none;
+    }
+    .section_menu #m1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section_menu #m1 .logo2{
+        display: block;
+    }
+    .section_main{
+        margin-left: 80px;
+    }
+    .content_main{
+        width: 75%;
+    }
+    #header{
+        width: 100%;
+    }
+}
+
+@media (max-width:786px) {
+    .content_main{
+        width: 100%;
+    }
+    .section_main{
+        margin-left:0px;
+    }
+    .section_menu{
+        width: 100%;
+        height: fit-content;
+       display: flex;
+       position: fixed;
+       bottom: 0px ;
+       padding: 0px;
+       z-index: 10;
+       border-top:1px solid #141414;
+
+    }
+    .section_menu #m1 #d{
+        display: flex;
+    }
+    .section_menu #m1 .logo2{
+        display: none;
+    }
+    .section_menu #d2{
+        display: none;
+    }
+    .section_footer{
+        display: none;
+    }
+    #d{
+        margin-top: 0px !important;
+        width: 100%;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    .section_menu #m1 #d div:hover{
+        background-color: black;
+    }
+    .div-search {
+        display: none !important;
+    }
+    .div-Notifcation{
+        display: none !important;
+    }
+    #header{
+        justify-content: center;
+    }
+    
+}
+
+@media (max-width:722px) {
+    #s1{
+       display: grid;
+       grid-template-columns: repeat(2,auto);
+    }
+    #s1 span{
+        grid-column: span 3;
+        margin-bottom: 15px;
+    }
+    #s1 i{
+        display: none;
+    }
+    #header img{
+        width: 80px;
+        height: 80px;
+    }
+    #s2{
+        display: none;
+    }
+    #imoge{
+        position: relative;
+        right: 100px;
+        bottom: 20px;
+    }
+    #section_button_de_controle div span{
+        display: none;
+    }
+    #section_button_de_controle{
+        justify-content: space-around;
+    }
+    #continer_icone_plus div{
+        width: 60px;
+        height: 60px;
+    }
+    #continer_icone_plus div span{
+        font-size: 60px;
+        font-weight: 200;
+    }
+    #section_nwe{
+        margin-top: 10px !important;
+    }
+    
 }
